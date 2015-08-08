@@ -166,20 +166,17 @@
 
 #pragma Public APIs
 -(TiBlob*)buildQrcode:(id)args{
-    NSLog(@"1");
     ENSURE_SINGLE_ARG(args, NSDictionary);
     
-    // Width and Height
-    CGFloat targetWidth = [TiUtils floatValue:args[@"width"]];
-    CGFloat targetHeight = [TiUtils floatValue:args[@"height"]];
+    //width
+    CGFloat targetWidth = [TiUtils floatValue:args[@"width"]] / 2;
     NSString *targetString = [TiUtils stringValue:args[@"text"]];
     
     UIImage* proceedImage;
 
     proceedImage = [self mdQRCodeForString:targetString size:targetWidth fillColor:[UIColor darkGrayColor]];
     
-     NSLog(@"2");
-    // Make blob
+    // generate blob
     NSString* mimeType;
     NSData* convertedData;
     mimeType = @"image/png";
