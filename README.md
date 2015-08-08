@@ -5,6 +5,10 @@ Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](
 
 #### Credit: [Jnis](https://github.com/Jnis)
 
+###Sample
+![iOS](assets/demo.png) 
+
+
 ### How to use
 ##### Reference module
 Register your module with your application by editing `tiapp.xml` and adding your module.
