@@ -5,7 +5,8 @@ Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](
 
 #### Credit: [Jnis](https://github.com/Jnis)
 
-#### REGISTER YOUR MODULE
+###How to use
+##### REGISTER YOUR MODULE
 Register your module with your application by editing `tiapp.xml` and adding your module.
 Example:
 ````
@@ -14,7 +15,7 @@ Example:
 </modules>
 ````
 
-#### USING YOUR MODULE IN CODE
+##### USING YOUR MODULE IN CODE
 ````
 var blob = mod.buildQrcode({
 	"width" : 50,
