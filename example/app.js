@@ -7,7 +7,6 @@ var mod = require("com.au.qr");
 
 var blob = mod.buildQrcode({
 	"width" : 50,
-	"height" : 50,
 	"text" : "What the hell is that!!!!"
 });
 
