@@ -22,7 +22,7 @@ Example:
 ##### Use module in your code
 ````
 /*
- * @param {String} color - ONLY supports Hex color as shown below. Use black if passed color cannot be resolved
+ * @param {String} color - supports Hex color and color name. Use black if passed color cannot be resolved
  */
 var blob = mod.buildQrcode({
 	"width" : 50,
@@ -38,7 +38,6 @@ var blob = mod.buildQrcode({
   * Add color support
 
 ## TODO
-@ Support color name
 @ Add 1D barcode generation capability
 
 ## License

@@ -121,18 +121,6 @@
     return [self mdQRCodeForString:qrString size:size fillColor:[UIColor blackColor]];
 }
 
--(UIColor *)colorFromHex:(NSString *)hex {
-    unsigned int c;
-    if ([hex characterAtIndex:0] == '#') {
-        [[NSScanner scannerWithString:[hex substringFromIndex:1]] scanHexInt:&c];
-    } else {
-        [[NSScanner scannerWithString:hex] scanHexInt:&c];
-    }
-    return [UIColor colorWithRed:((c & 0xff0000) >> 16)/255.0
-                           green:((c & 0xff00) >> 8)/255.0
-                            blue:(c & 0xff)/255.0 alpha:1.0];
-}
-
 - (UIImage *)mdQRCodeForString:(NSString *)qrString size:(CGFloat)imageSize fillColor:(UIColor *)fillColor {
     if (0 == [qrString length]) {
         return nil;
@@ -183,13 +171,12 @@
     //width
     CGFloat targetWidth = [TiUtils floatValue:args[@"width"]] / 2;
     NSString *targetString = [TiUtils stringValue:args[@"text"]];
-    NSString *colorCode = [TiUtils stringValue:args[@"color"]];
     
-    //TiColor *colorCode = [TiUtils colorValue:@"color"];
-    //UIColor *targetColor = [colorCode _color];
+    //call TiUtils class method colorValue
+    TiColor *colorCode = [TiUtils colorValue:args[@"color"]];
+    //equivalent colorCode._color
+    UIColor *targetColor = [colorCode _color];
 
-    UIColor *targetColor = [self colorFromHex:colorCode];
-    
     UIImage* proceedImage = [self mdQRCodeForString:targetString size:targetWidth fillColor:targetColor];
 
     // generate blob
