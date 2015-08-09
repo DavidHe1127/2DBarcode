@@ -17,15 +17,25 @@ Example:
 
 ##### Use module in your code
 ````
+/*
+ * @param {String} color - ONLY supports Hex color as shown below. Use black if passed color cannot be resolved
+ */
 var blob = mod.buildQrcode({
 	"width" : 50,
-	"text" : "What the hell is that!!!!"
+	"text" : "What the hell is that!!!!",
+    "color" : "#000000"
 });
 ````
 
 ## Version
 * 1.0
   * Initial version
+* 1.0.1
+  * Add color support
+
+## TODO
+@ Support color name
+@ Add 1D barcode generation capability
 
 ## License
 MIT
