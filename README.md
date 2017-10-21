@@ -1,11 +1,11 @@
-##2D Barcode generator - wrapper of iOS QR Code Encoder
+## 2D Barcode generator - wrapper of iOS QR Code Encoder
 
 [![Appcelerator
 Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://appcelerator.com/titanium/)
 
 #### Credit: [Jnis](https://github.com/Jnis)
 
-###Sample
+### Sample
 ![iOS](assets/demo.png) 
 
 
